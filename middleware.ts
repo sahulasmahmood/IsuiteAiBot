@@ -32,3 +32,5 @@ export const config = {
     '/api/connections/:path*',
   ],
 };
+
+export const runtime = 'nodejs';
