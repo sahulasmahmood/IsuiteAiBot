@@ -96,7 +96,7 @@ Respond with ONLY the title, no quotes or extra text. Focus on the main action o
         });
         
         // Find first non-greeting message
-        const meaningfulMessage = messages.find(m => 
+        const meaningfulMessage = messages.find((m: { role: string; content: string }) => 
           m.role === 'user' && 
           !m.content.toLowerCase().match(/^(hi|hello|hey|greetings?)$/i)
         );
