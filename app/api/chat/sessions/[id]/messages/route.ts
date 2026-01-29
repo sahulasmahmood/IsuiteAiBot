@@ -65,7 +65,7 @@ export async function POST(
         if (allMessages.length >= 2) {
           // Build conversation context
           const conversationContext = allMessages
-            .map(msg => `${msg.role}: ${msg.content}`)
+            .map((msg: { role: string; content: string }) => `${msg.role}: ${msg.content}`)
             .join('\n');
 
           // Use AI to generate a concise, descriptive title based on the actual topic
